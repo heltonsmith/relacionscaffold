@@ -1,10 +1,4 @@
-<h1>Editing apartment</h1>
-
-<%= render "form", apartment: @apartment %>
-
-<br>
-
-<div>
-  <%= link_to "Show this apartment", @apartment %> |
-  <%= link_to "Back to apartments", apartments_path %>
-</div>
+<h1>Editing Apartment </h1>
+<%= render 'form', apartment: @apartment %>
+<%= link_to 'Show', building_apartment_path(@building, @apartment) %> |
+<%= link_to 'Back', building_apartments_path(@building) %>

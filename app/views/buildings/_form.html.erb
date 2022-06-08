@@ -11,10 +11,16 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <p>Building fields </p>
+    <div class="field">
+    <%= form.label :name %>
     <%= form.text_field :name %>
-  </div>
+    </div>
+    <p>Apartment fields </p>
+    <%= form.fields_for :apartments do |apartment_form | %>
+    <%= apartment_form .label :number %>
+    <%= apartment_form .text_field :number %>
+    <% end %>
 
   <div>
     <%= form.submit %>

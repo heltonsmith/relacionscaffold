@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-<%= render @apartment %>
-
-<div>
-  <%= link_to "Edit this apartment", edit_apartment_path(@apartment) %> |
-  <%= link_to "Back to apartments", apartments_path %>
-
-  <%= button_to "Destroy this apartment", @apartment, method: :delete %>
-</div>
+<p>
+  <strong>Number:</strong>
+  <%= @apartment.number %>
+</p>
+<p>
+  <strong>Building:</strong>
+  <%= @apartment.building.name %>
+</p>
+<%= link_to 'Edit', edit_building_apartment_path(@building, @apartment) %> |
+<%= link_to 'Back', building_apartments_path(@building) %>

@@ -16,3 +16,16 @@
 
 <%= link_to "Apartments", apartments_path %>
 
+
+<br><br><br>
+
+<%
+
+Building.includes(:apartments).each do |building|
+  building.apartments.each do |apartment|
+    puts apartment.number
+  end
+end
+
+
+%>
